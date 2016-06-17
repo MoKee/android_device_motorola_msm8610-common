@@ -17,17 +17,14 @@
 
 package org.mokee.hardware;
 
-import org.mokee.hardware.util.FileUtils;
-
-import java.io.File;
+import org.mokee.internal.util.FileUtils;
 
 public class DisplayColorCalibration {
 
     private static final String KCAL_TUNING_FILE = "/sys/devices/virtual/graphics/fb0/kcal";
 
     public static boolean isSupported() {
-        File file = new File(KCAL_TUNING_FILE);
-        return file.exists();
+        return FileUtils.isFileWritable(KCAL_TUNING_FILE);
     }
 
     public static int getMaxValue() {
