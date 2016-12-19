@@ -89,7 +89,7 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 TARGET_NO_RPC := true
 
 # Hardware tunables framework
-BOARD_HARDWARE_CLASS := $(COMMON_PATH)/cmhw/
+BOARD_HARDWARE_CLASS := $(COMMON_PATH)/mkhw/
 
 # Init
 TARGET_UNIFIED_DEVICE := true
